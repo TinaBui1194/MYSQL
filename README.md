@@ -31,4 +31,8 @@ AND
 NOT LEFT (CITY, 1) IN ('a', 'e', 'i', 'o', 'u');
 SELECT Name FROM STUDENTS 
 WHERE Marks > 75
-ORDER BY RIGHT (NAME,3) ASC, ID ASC
+ORDER BY RIGHT (NAME,3) ASC, ID ASC;
+SELECT name FROM Employee
+WHERE salary > 2000
+AND months < 10
+ORDER BY employee_id ASC;
