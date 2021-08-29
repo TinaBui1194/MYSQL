@@ -36,3 +36,6 @@ SELECT name FROM Employee
 WHERE salary > 2000
 AND months < 10
 ORDER BY employee_id ASC;
+SELECT ROUND (MIN(LAT_N), 4)
+FROM STATION
+WHERE LAT_N > 38.7780;
