@@ -29,3 +29,6 @@ FROM STATION
 WHERE NOT RIGHT (CITY, 1) IN ('a', 'e', 'i', 'o', 'u')
 AND
 NOT LEFT (CITY, 1) IN ('a', 'e', 'i', 'o', 'u');
+SELECT Name FROM STUDENTS 
+WHERE Marks > 75
+ORDER BY RIGHT (NAME,3) ASC, ID ASC
