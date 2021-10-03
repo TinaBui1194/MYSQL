@@ -1,43 +1,80 @@
 # MYSQL
 ```mysql
 SELECT * FROM students WHERE first_name='Bob' and postcode=2303;
-SELECT DISTINCT CITY FROM STATION WHERE ( ID % 2 ) = 0;
-SELECT COUNT(CITY) - COUNT(DISTINCT CITY);
+```
+
+```mysql
+SELECT DISTINCT CITY FROM STATION WHERE ( ID % 2 ) = 0
+```
+
+```mysql
+SELECT COUNT(CITY) - COUNT(DISTINCT CITY)
+```
+
+```mysql
 (SELECT CITY, LENGTH(CITY)
 FROM STATION 
 ORDER BY LENGTH(CITY) ASC, CITY ASC LIMIT 1)
 UNION
 (SELECT  CITY, LENGTH(CITY)
 FROM STATION 
-ORDER BY LENGTH(CITY) DESC, CITY ASC LIMIT 1);
+ORDER BY LENGTH(CITY) DESC, CITY ASC LIMIT 1)
+```
+
+```mysql
 SELECT DISTINCT(CITY)
 FROM STATION 
-WHERE LEFT(CITY, 1) IN ('a', 'e', 'i', 'o', 'u');
+WHERE LEFT(CITY, 1) IN ('a', 'e', 'i', 'o', 'u')
+```
+
+```mysql
 SELECT DISTINCT (CITY)
 FROM STATION
-WHERE RIGHT (CITY,1) IN ('a', 'e', 'i', 'o', 'u');
+WHERE RIGHT (CITY,1) IN ('a', 'e', 'i', 'o', 'u')
+```
+
+```mysql
 SELECT DISTINCT(CITY)
 FROM STATION 
 WHERE LEFT(CITY,1) IN ('a', 'e', 'i', 'o', 'u')
 AND
-RIGHT (CITY,1) IN ('a', 'e', 'i', 'o', 'u');
+RIGHT (CITY,1) IN ('a', 'e', 'i', 'o', 'u')
+```
+
+```mysql
 SELECT DISTINCT(CITY)
 FROM STATION 
-WHERE NOT LEFT(CITY, 1) IN ('a', 'e', 'i', 'o', 'u');
+WHERE NOT LEFT(CITY, 1) IN ('a', 'e', 'i', 'o', 'u')
+```
+
+```mysql
 SELECT DISTINCT(CITY)
 FROM STATION 
 WHERE NOT RIGHT (CITY, 1) IN ('a', 'e', 'i', 'o', 'u')
 AND
-NOT LEFT (CITY, 1) IN ('a', 'e', 'i', 'o', 'u');
+NOT LEFT (CITY, 1) IN ('a', 'e', 'i', 'o', 'u')
+```
+
+```mysql
 SELECT Name FROM STUDENTS 
 WHERE Marks > 75
-ORDER BY RIGHT (NAME,3) ASC, ID ASC;
+ORDER BY RIGHT (NAME,3) ASC, ID ASC
+```
+
+```mysql
 SELECT name FROM Employee
 WHERE salary > 2000
 AND months < 10
-ORDER BY employee_id ASC;
+ORDER BY employee_id ASC
+```
+
+```mysql
 SELECT ROUND (MIN(LAT_N), 4)
 FROM STATION
-WHERE LAT_N > 38.7780;
+WHERE LAT_N > 38.7780
+```
+
+```mysql
 SELECT ROUND (LONG_W, 4) FROM STATION 
-WHERE LAT_N = (SELECT MIN (LAT_N) FROM STATION WHERE LAT_N > 38.7780);
+WHERE LAT_N = (SELECT MIN (LAT_N) FROM STATION WHERE LAT_N > 38.7780)
+```
