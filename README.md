@@ -84,6 +84,11 @@ SELECT COUNT(NAME)
 FROM CITY
 WHERE POPULATION > 100000;
 
-```select  country.continent, FLOOR(AVG(city.population)) from country
+```
+
+```mysql
+select  country.continent, FLOOR(AVG(city.population)) from country
 join city on city.countrycode = country.code
 group by country.continent
+
+```
