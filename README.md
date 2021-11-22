@@ -83,4 +83,7 @@ WHERE LAT_N = (SELECT MIN (LAT_N) FROM STATION WHERE LAT_N > 38.7780)
 SELECT COUNT(NAME)
 FROM CITY
 WHERE POPULATION > 100000;
-```
+
+```select  country.continent, FLOOR(AVG(city.population)) from country
+join city on city.countrycode = country.code
+group by country.continent
