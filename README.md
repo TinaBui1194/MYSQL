@@ -92,3 +92,6 @@ join city on city.countrycode = country.code
 group by country.continent
 
 ```
+```mysql
+SELECT CEIL((AVG(salary)) - (AVG(REPLACE(salary, '0', '')))) FROM employees
+```
