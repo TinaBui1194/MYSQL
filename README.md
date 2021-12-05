@@ -97,7 +97,7 @@ SELECT CEIL((AVG(salary)) - (AVG(REPLACE(salary, '0', '')))) FROM employees
 ```
 
 ```mysql
-DECLARE @rows int                  
+DECLARE @rows int-- Declare                   
 SELECT @rows = 1                  
 WHILE @rows <= 20                  
 BEGIN                            
