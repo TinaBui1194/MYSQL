@@ -95,3 +95,14 @@ group by country.continent
 ```mysql
 SELECT CEIL((AVG(salary)) - (AVG(REPLACE(salary, '0', '')))) FROM employees
 ```
+
+```mysql
+DECLARE @rows int                  
+SELECT @rows = 1                  
+WHILE @rows <= 20                  
+BEGIN                            
+PRINT replicate('* ', @rows)      
+SET @rows = @rows + 1              
+END 
+
+```
