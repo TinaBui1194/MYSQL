@@ -114,5 +114,5 @@ BEGIN                             -- Begin
 PRINT replicate('* ', @rows)       -- Print
 SET @rows = @rows - 1               -- Set
 END                               -- end
-                           -- end
+               
 ```
