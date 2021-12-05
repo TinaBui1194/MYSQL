@@ -104,5 +104,15 @@ BEGIN --Begin
 PRINT replicate('* ', @rows)--Print      
 SET @rows = @rows + 1 --Set             
 END --End
+```
 
+```mysql
+DECLARE @rows int                  -- Declare 
+SELECT @rows = 20                  -- initialization 
+WHILE @rows > 0                  -- Condition
+BEGIN                             -- Begin
+PRINT replicate('* ', @rows)       -- Print
+SET @rows = @rows - 1               -- Set
+END                               -- end
+                           -- end
 ```
