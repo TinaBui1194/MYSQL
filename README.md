@@ -116,3 +116,8 @@ SET @rows = @rows - 1               -- Set
 END                               -- end
                
 ```
+
+SELECT (Salary*Months)as earnings, COUNT(*) 
+FROM EMPLOYEE
+GROUP BY 1
+ORDER By earnings DESC limit 1;
