@@ -131,5 +131,18 @@ JOIN Friends on Students.ID = Friends.ID
 JOIN Packages on Friends.ID = Packages.ID
 JOIN Packages p2 on Friends.Friend_ID = p2.ID
 Where Packages.Salary < p2.Salary
+ORDER By p2.Salary
 ```
-ORDER By p2.Salary;
+```mysql
+SELECT C.company_code,
+         C.founder,
+         Count(DISTINCT E.lead_manager_code),
+         Count(DISTINCT E.senior_manager_code),
+         Count(DISTINCT E.manager_code),
+         Count(DISTINCT E.employee_code)
+FROM Company C
+JOIN Employee E
+WHERE C.company_code = E.company_code
+GROUP BY  C.company_code, C.founder
+ORDER BY  C.company_code
+```
