@@ -123,3 +123,13 @@ FROM EMPLOYEE
 GROUP BY 1
 ORDER By earnings DESC limit 1
 ```
+
+```mysql
+SELECT Students.name
+From Students 
+JOIN Friends on Students.ID = Friends.ID
+JOIN Packages on Friends.ID = Packages.ID
+JOIN Packages p2 on Friends.Friend_ID = p2.ID
+Where Packages.Salary < p2.Salary
+```
+ORDER By p2.Salary;
